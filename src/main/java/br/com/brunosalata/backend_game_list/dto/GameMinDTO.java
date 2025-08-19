@@ -1,6 +1,7 @@
 package br.com.brunosalata.backend_game_list.dto;
 
 import br.com.brunosalata.backend_game_list.entities.Game;
+import br.com.brunosalata.backend_game_list.projections.GameMinProjection;
 
 /**
  * @author Bruno Salata Lima
@@ -27,6 +28,13 @@ public class GameMinDTO {
         year = game.getYear();
         imgUrl = game.getImgUrl();
         shortDescription = game.getShortDescription();
+    }
+    public GameMinDTO(GameMinProjection gameMinProjection) {
+        id = gameMinProjection.getId();
+        title = gameMinProjection.getTitle();
+        year = gameMinProjection.getYear();
+        imgUrl = gameMinProjection.getImgUrl();
+        shortDescription = gameMinProjection.getShortDescription();
     }
 
     public Long getId() {
