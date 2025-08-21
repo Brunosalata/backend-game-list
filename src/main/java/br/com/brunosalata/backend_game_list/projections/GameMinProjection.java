@@ -7,7 +7,7 @@ package br.com.brunosalata.backend_game_list.projections;
 public interface GameMinProjection {
     Long getId();
     String getTitle();
-    Integer getYear();
+    Integer getGameYear();
     String getImgUrl();
     String getShortDescription();
     Integer getPosition();
